@@ -28,7 +28,7 @@ function saveMessages(data) {
 // 1. Mostrar todos los mensajes (Inicio)
 app.get('/', (req, res) => {
     const currentMessages = getMessages();
-    res.render('index', { title: "Mini Tablón de Anuncios", messages: currentMessages });
+    res.render('index', { title: "Pizarra de Mensajes", messages: currentMessages });
 });
 
 // 2. Mostrar el formulario para crear un mensaje nuevo
