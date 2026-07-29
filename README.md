@@ -42,7 +42,7 @@ Si deseas correr este proyecto en tu propia máquina, sigue estos pasos:
 
 1. Clona el repositorio:
    ```bash
-   git clone [https://github.com/TuUsuario/message-board.git](https://github.com/Tomas2439/message-board.git)
+   git clone https://github.com/Tomas2439/message-board.git
    ```
 2. Navega al directorio del proyecto:
    ```bash
