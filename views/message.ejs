@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%= title %>
+    </title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body class="form-page">
+    <div class="form-container" style="max-width: 600px;">
+
+        <!-- Encabezado con Avatar -->
+        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 2rem;">
+            <div class="avatar" style="width: 64px; height: 64px; font-size: 1.5rem;">
+                <%= message.user.charAt(0).toUpperCase() %>
+            </div>
+            <div>
+                <h2 style="margin-bottom: 0;">
+                    <%= message.user %>
+                </h2>
+                <span class="timestamp">
+                    Publicado el <%= new Date(message.added).toLocaleDateString('es-AR', { weekday: 'long' ,
+                        year: 'numeric' , month: 'long' , day: 'numeric' }) %> a las <%= new
+                            Date(message.added).toLocaleTimeString('es-AR') %>
+                </span>
+            </div>
+        </div>
+
+        <!-- Área de Edición -->
+        <div style="background: var(--bg-color); padding: 1.5rem; border-radius: var(--radius); margin-bottom: 2rem;">
+            <!-- Formulario para GUARDAR CAMBIOS -->
+            <form method="POST" action="/message/<%= message.id %>/edit" id="edit-form">
+                <textarea name="messageText" rows="4" required
+                    style="width: 100%; background: transparent; border: 1px dashed #cbd5e1; padding: 1rem; font-family: inherit; font-size: 1.2rem; color: var(--text-main); resize: vertical; outline: none; border-radius: 8px;"><%= message.text %></textarea>
+                <small style="color: var(--text-muted); display: block; margin-top: 0.5rem;">Puedes modificar el texto
+                    arriba y guardar los cambios.</small>
+            </form>
+        </div>
+
+        <!-- Botones de Acción -->
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+            <a href="/" class="btn btn-secondary">Volver al inicio</a>
+
+            <div style="display: flex; gap: 1rem;">
+                <!-- Botón que activa el formulario de edición -->
+                <button type="submit" form="edit-form" class="btn btn-primary">Guardar cambios</button>
+
+                <!-- Formulario independiente para ELIMINAR -->
+                <!-- Usamos un form porque un botón suelto no puede enviar datos POST por sí solo en HTML puro -->
+                <form method="POST" action="/message/<%= message.id %>/delete" style="margin: 0;">
+                    <button type="submit" class="btn btn-danger">Eliminar</button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

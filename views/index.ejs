@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%= title %>
+    </title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <div class="app-container">
+        <header class="app-header">
+            <div class="header-content">
+                <h1>
+                    <%= title %>
+                </h1>
+                <p>Comparte lo que estás pensando</p>
+            </div>
+            <a href="/new" class="btn btn-primary">+ Nuevo Mensaje</a>
+        </header>
+
+        <main class="messages-feed">
+            <% messages.forEach(function(msg) { %>
+                <article class="message-card">
+                    <!-- Avatar generado dinámicamente -->
+                    <div class="avatar">
+                        <%= msg.user.charAt(0).toUpperCase() %>
+                    </div>
+
+                    <div class="message-content">
+                        <div class="message-header">
+                            <h3 class="username">
+                                <%= msg.user %>
+                            </h3>
+                            <span class="timestamp">
+                                <%= new Date(msg.added).toLocaleString('es-AR', { dateStyle: 'medium' ,
+                                    timeStyle: 'short' }) %>
+                            </span>
+                        </div>
+
+                        <p class="message-text">
+                            <%= msg.text %>
+                        </p>
+
+                        <!-- Botón de detalles con enlace al ID -->
+                        <div style="margin-top: 1rem; text-align: right;">
+                            <a href="/message/<%= msg.id %>" class="btn btn-secondary"
+                                style="font-size: 0.8rem; padding: 0.4rem 0.8rem;">Ver detalles</a>
+                        </div>
+                    </div>
+                </article>
+                <% }) %>
+        </main>
+    </div>
+</body>
+
+</html>

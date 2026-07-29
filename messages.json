@@ -1,0 +1,20 @@
+[
+    {
+        "id": "1",
+        "text": "Buenas tardes/noches. Bienvenido!",
+        "user": "Tomy",
+        "added": "2026-07-29T12:00:00.000Z"
+    },
+    {
+        "id": "2",
+        "text": "Aqui estamos aprendiendo Noje.js",
+        "user": "Bautista",
+        "added": "2026-07-29T13:30:00.000Z"
+    },
+    {
+        "id": "4",
+        "text": "Me gusta como te quedo, amigo!",
+        "user": "Agustin",
+        "added": "2026-07-29T20:35:57.398Z"
+    }
+]
