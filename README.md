@@ -2,10 +2,11 @@
 
 Una aplicación web Full-Stack construida con Node.js y Express que funciona como un tablón de anuncios dinámico. Este proyecto forma parte del currículo de The Odin Project y ha sido expandido para incluir operaciones CRUD completas y un diseño moderno "Dark Mode".
 
-![Vista previa del proyecto](Enlace_a_una_captura_de_pantalla_de_tu_app_aqui.png)
+## Vista Previa
+<img width="716" height="769" alt="image" src="https://github.com/user-attachments/assets/db1f7730-4acd-45e1-b612-f79ed0727d9e" />
 
 ## 🚀 Enlace en Vivo
-[Visita la aplicación desplegada en Render aquí](https://message-board-app-trhc.onrender.com)
+[Visita la aplicación desplegada en Render aquí](https://message-board-app-trhc.onrender.com/)
 
 ## ✨ Características Principales
 
@@ -56,7 +57,7 @@ Si deseas correr este proyecto en tu propia máquina, sigue estos pasos:
    ```bash
    node app.js
    ```
-5. Abre tu navegador web y visita: `http://localhost:10000`
+5. Abre tu navegador web y visita: `http://localhost:3000`
 
 ## 🤝 Créditos
 Desarrollado como parte del currículo de [The Odin Project](https://www.theodinproject.com/).
